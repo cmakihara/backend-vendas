@@ -27,7 +27,7 @@ public class Produto implements Serializable {
 	
 	private String nome;
 	
-	private Double valor;
+	private Double preco;
 	
 	@JsonIgnore
 	@OneToMany(mappedBy="id.produto")
@@ -58,12 +58,12 @@ public class Produto implements Serializable {
 		this.nome = nome;
 	}
 
-	public double getValor() {
-		return valor;
+	public double getPreco() {
+		return preco;
 	}
 
-	public void setValor(double valor) {
-		this.valor = valor;
+	public void setPreco(double preco) {
+		this.preco = preco;
 	}
 
 	public Set<ItemPedido> getItens() {
@@ -81,7 +81,7 @@ public class Produto implements Serializable {
 		super();
 		this.id = id;
 		this.nome = nome;
-		this.valor = valor;
+		this.preco = valor;
 	}
 	
 	
