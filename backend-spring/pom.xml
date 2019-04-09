@@ -38,15 +38,20 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>			
-
+		</dependency>	
 		
+	<dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derby</artifactId>
+    </dependency>		
+
+	<!--  	
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
+-->
 	</dependencies>
 
 	<build>
