@@ -45,7 +45,7 @@ public class PedidoService {
 			ip.setPreco(ip.getProduto().getPreco());
 			ip.setPedido(pedido);
 		}
-		itemPedidoRepository.saveAll(pedido.getItens());
+	//	itemPedidoRepository.saveAll(pedido.getItens());
 		return pedido;
 	}
 	

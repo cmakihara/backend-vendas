@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,8 +21,8 @@ public class Pedido implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
-	
-	@OneToMany(mappedBy="id.pedido")
+	//TODO Check
+	@OneToMany(mappedBy="id.pedido",cascade=CascadeType.ALL, orphanRemoval=true)	
 	private Set<ItemPedido> itens = new HashSet<>();
 	
 	public double getValorTotal() {
